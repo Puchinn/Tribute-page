@@ -180,10 +180,16 @@ main {
   padding: 7px 0;
 }
 
+/* CITE SECTION */
 .cite-section {
   margin-top: 120px;
   border-top: 2px solid #fff;
   padding: 60px 0;
+}
+
+.cite-container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .quote-img {
@@ -201,7 +207,6 @@ main {
 }
 
 /* AWARDS SECTION */
-
 .awards-section {
   padding: 40px 0;
   border-top: 2px solid #fff;
@@ -213,15 +218,17 @@ main {
   padding-bottom: 40px;
 }
 
-.awards-container {
+.awards-container-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto auto;
   gap: 15px;
   padding: 10px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.award-container {
+.award-item {
   display: flex;
   align-items: start;
   gap: 30px;
@@ -232,11 +239,7 @@ main {
   max-width: 450px;
 }
 
-.center-div {
-  display: flex;
-  justify-content: center;
-}
-
+/* MOVIES SECTION */
 .movies-section {
   padding: 40px;
   border-top: 2px solid #fff;
@@ -352,4 +355,86 @@ main {
 
 .line-section {
   height: 95%;
+}
+
+/* RESPONSIVE */
+@media (max-width:870px) {
+  body {
+    text-wrap: balance;
+  }
+
+  .overview-section-grid {
+    grid-template-columns: auto;
+  }
+
+  .header-container {
+    display: block;
+    padding-left: 20px;
+  }
+
+  .header-h1 {
+    padding: 10px 0;
+    text-align: start;
+  }
+
+  .section-img {
+    display: none;
+  }
+
+  .info-text {
+    max-width: none;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .cite-section {
+    margin-top: 70px;
+  }
+
+  .quote-img {
+    width: 150px;
+    margin-top: -100px;
+  }
+
+  .cite-h1 {
+    font-size: 36px;
+    padding: 40px 10px;
+  }
+
+  .awards-container-grid {
+    grid-template-columns: auto;
+    justify-content: center;
+    padding: 10px 15px;
+  }
+
+  .award-p {
+    max-width: none;
+  }
+
+  .movies-cards-flex {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .final-section {
+    display: block;
+    padding: 50px 15px;
+  }
+
+  .final-section h1 {
+    text-align: center;
+    max-width: none;
+  }
+
+  .final-section svg {
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+
+  }
+
+  .border-reference-final {
+    display: none;
+  }
 }
